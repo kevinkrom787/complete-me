@@ -14,16 +14,12 @@ describe('Node', () => {
     expect(node).to.exist;
   })
 
-  it('should default next to null', () => {
-    expect(node.next).to.equal(null);
-  })
-
   it('should take data and assign it to a data property', () => {
     expect(node.data).to.equal('pizza');
   })
 
   it('should have a lastNode property set to false', () => {
-    expect(node.lastNode).to.equal(false);
+    expect(node.completedWord).to.equal(null);
   })
 
   it('should have a children property of an empty object', () => {
