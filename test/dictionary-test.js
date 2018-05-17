@@ -13,7 +13,7 @@ describe('Tree', () => {
   tree = new Tree()
   })
   describe('Populate', () => {
-  it ('should count words in the dictionary', () => {
+  it('should count words in the dictionary', () => {
     tree.populate(dictionary);
     tree.count()
         // console.log(JSON.stringify(tree, null, 4))
