@@ -24,7 +24,6 @@ describe('Tree', () => {
     it('should be able to add a node to the tree', () => {
       tree.insert('hi')
 
-
       expect(Object.keys(tree.root.children)).to.deep.equal(['h']);
     })
 
