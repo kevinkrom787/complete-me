@@ -53,6 +53,14 @@ describe('Tree', () => {
     })
 
     describe('suggest', () => {
+      it('should console log something', () => {
+        tree.insert('suh')
+
+        tree.suggest('s')
+        expect(true).to.equal(true);
+      })
+
+
       it('should be able to suggest a word', () => {
         tree.insert('dog');
         tree.insert('dogs');
@@ -73,6 +81,16 @@ describe('Tree', () => {
         tree.insert('dude')
 
         expect(tree.suggest('d')).to.deep.equal(['dude']);
+      })
+
+      it('should count popularity', () => {
+        tree.insert('dog');
+        tree.insert('dog');
+
+        tree.suggest('dog');
+        tree.suggest('dog');
+        console.log(JSON.stringify(tree, null, 4))
+        expect(true).to.equal(true);
       })
 
     })
